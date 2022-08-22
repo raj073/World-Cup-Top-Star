@@ -44,7 +44,7 @@
 
     <section class="container py-5">
 
-        <div
+        <div id="eventBubbleClick"
             class="row row-cols-lg-4 row-cols-md-2 row-cols-1 py-3 gy-3 d-flex justify-content-center align-items-center">
 
             <!-- Card 1 -->
@@ -52,10 +52,10 @@
                 <div class="card">
                     <img src="images/messi.png" class="card-img-top" alt="Lionel Messi">
                     <div class="card-body">
-                        <h5 class="card-title">Lionel Messi</h5>
+                        <h5 id="lionelMessiText" class="card-title">Lionel Messi</h5>
                         <p class="card-text">36 Goals &nbsp;&nbsp; .<span>&nbsp;&nbsp;120 Assists</span>
                         </p>
-                        <a href="#" class="btn btn-primary">SELECT</a>
+                        <button id="btnLionelMessi" class="btn btn-primary">SELECT</button>
                     </div>
                 </div>
             </div>
@@ -67,9 +67,9 @@
                 <div class="card">
                     <img src="images/neymar.png" class="card-img-top" alt="Neymar Jr">
                     <div class="card-body">
-                        <h5 class="card-title">Neymar Jr</h5>
+                        <h5 id="neymarText" class="card-title">Neymar Jr</h5>
                         <p class="card-text">36 Goals &nbsp;&nbsp; .<span>&nbsp;&nbsp;120 Assists</p>
-                        <a href="#" class="btn btn-primary">SELECT</a>
+                        <button id="btnNeymar" class="btn btn-primary">SELECT</button>
                     </div>
                 </div>
             </div>
@@ -79,26 +79,22 @@
                 <div class="card">
                     <img src="images/Alison.jpg" class="card-img-top" alt="Alisson Becker">
                     <div class="card-body">
-                        <h5 class="card-title">Alisson Becker</h5>
+                        <h5 id="alissonText" class="card-title">Alisson Becker</h5>
                         <p class="card-text">36 Goals &nbsp;&nbsp; .<span>&nbsp;&nbsp;120 Saved</p>
-                        <a href="#" class="btn btn-primary">SELECT</a>
+                        <button id="btnAlison" class="btn btn-primary">SELECT</button>
                     </div>
                 </div>
             </div>
 
             <!-- Card 4 -->
-            <div class="col">
+            <div class="col" style="height: 345px;">
                 <div class="card h-100">
                     <div class="card-body">
                         <h5 class="card-title text-center py-4 text-uppercase bg-primary text-white">Selected Player
                         </h5>
 
-                        <ol class="list-group pt-4">
-                            <a href="#" class="list-group-item list-group-item-success">1. First item</a>
-                            <a href="#" class="list-group-item list-group-item-info">2. Second item</a>
-                            <a href="#" class="list-group-item list-group-item-warning">3. Third item</a>
-                            <a href="#" class="list-group-item list-group-item-danger">4. Fourth item</a>
-                            <a href="#" class="list-group-item list-group-item-primary">5. Fourth item</a>
+                        <ol id="selected-player-list" class="list-group pt-3 p-4">
+
                         </ol>
                     </div>
                 </div>
@@ -109,10 +105,10 @@
                 <div class="card">
                     <img src="images/marcelo.jpg" class="card-img-top" alt="Marcelo M12">
                     <div class="card-body">
-                        <h5 class="card-title">Marcelo M12</h5>
+                        <h5 id="marceloText" class="card-title">Marcelo M12</h5>
                         <p class="card-text">36 Goals &nbsp;&nbsp; .<span>&nbsp;&nbsp;120 Assists</span>
                         </p>
-                        <a href="#" class="btn btn-primary">SELECT</a>
+                        <button id="btnMarcelo" class="btn btn-primary">SELECT</button>
                     </div>
                 </div>
             </div>
@@ -124,9 +120,9 @@
                 <div class="card">
                     <img src="images/cr7 2.jpg" class="card-img-top" alt="Cristiano Ronaldo">
                     <div class="card-body">
-                        <h5 class="card-title">Cristiano Ronaldo</h5>
+                        <h5 id="ronaldoText" class="card-title">Cristiano Ronaldo</h5>
                         <p class="card-text">36 Goals &nbsp;&nbsp; .<span>&nbsp;&nbsp;120 Assists</p>
-                        <a href="#" class="btn btn-primary">SELECT</a>
+                        <button id="btnRonaldo" class="btn btn-primary">SELECT</button>
                     </div>
                 </div>
             </div>
@@ -136,9 +132,9 @@
                 <div class="card">
                     <img src="images/mbappe.png" class="card-img-top" alt="Kylian Mbappé">
                     <div class="card-body">
-                        <h5 class="card-title">Kylian Mbappé</h5>
+                        <h5 id="mBappeText" class="card-title">Kylian Mbappé</h5>
                         <p class="card-text">36 Goals &nbsp;&nbsp; .<span>&nbsp;&nbsp;120 Assists</p>
-                        <a href="#" class="btn btn-primary">SELECT</a>
+                        <button id="btnMbappe" class="btn btn-primary">SELECT</button>
                     </div>
                 </div>
             </div>
@@ -204,12 +200,12 @@
                     </div>
                 </div>
             </div>
-
+        </div>
     </section>
 
 
 
-
+    <script src="js/app.js"></script>
 </body>
 
 </html>

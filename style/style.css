@@ -6,3 +6,28 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+/* Remove margins and padding from the list */
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the list items */
+ol li {
+
+    padding: 12px 8px 12px 40px;
+    font-size: 14px;
+    transition: 0.2s;
+
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ol li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ol li:hover {
+    background: #ddd;
+}
