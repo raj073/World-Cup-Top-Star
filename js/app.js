@@ -31,27 +31,33 @@ document.getElementById('eventBubbleClick').addEventListener('click', function (
 
     if (target.id === 'btnLionelMessi') {
         getListItem('lionelMessiText');
+        getMakeEmptyField();
         document.getElementById('btnLionelMessi').setAttribute('disabled', true);
     }
     else if (target.id === 'btnNeymar') {
         getListItem('neymarText');
         document.getElementById('btnNeymar').setAttribute('disabled', true);
+        getMakeEmptyField();
     }
     else if (target.id === 'btnAlison') {
         getListItem('alissonText');
         document.getElementById('btnAlison').setAttribute('disabled', true);
+        getMakeEmptyField();
     }
     else if (target.id === 'btnMarcelo') {
         getListItem('marceloText');
         document.getElementById('btnMarcelo').setAttribute('disabled', true);
+        getMakeEmptyField();
     }
     else if (target.id === 'btnRonaldo') {
         getListItem('ronaldoText');
         document.getElementById('btnRonaldo').setAttribute('disabled', true);
+        getMakeEmptyField();
     }
     else if (target.id === 'btnMbappe') {
         getListItem('mBappeText');
         document.getElementById('btnMbappe').setAttribute('disabled', true);
+        getMakeEmptyField();
     }
 
 })
@@ -61,7 +67,7 @@ document.getElementById('eventBubbleClick').addEventListener('click', function (
 document.getElementById('btnCalculate').addEventListener('click', function () {
 
     const perPlayerField = document.getElementById('perPlayerField');
-    const inputPerPlayerField = parseInt(perPlayerField.value);
+    const inputPerPlayerField = parseFloat(perPlayerField.value);
 
     const playerExpensesField = document.getElementById('playerExpensesField');
 
@@ -91,9 +97,9 @@ document.getElementById('btnCalculate').addEventListener('click', function () {
 
 //Calculate Total Button Calculation Clicking Event
 document.getElementById('btnCalculateTotal').addEventListener('click', function () {
-    const playerExpenses = parseInt(document.getElementById('playerExpensesField').innerText);
-    const managerExpenses = parseInt(document.getElementById('managerField').value);
-    const coachExpenses = parseInt(document.getElementById('coachField').value);
+    const playerExpenses = parseFloat(document.getElementById('playerExpensesField').innerText);
+    const managerExpenses = parseFloat(document.getElementById('managerField').value);
+    const coachExpenses = parseFloat(document.getElementById('coachField').value);
     const totalExpensesField = document.getElementById('totalExpensesField');
 
     if (isNaN(managerExpenses) || isNaN(coachExpenses)) {
@@ -105,10 +111,18 @@ document.getElementById('btnCalculateTotal').addEventListener('click', function 
         perPlayerField.value = '';
     }
     else {
-        const totalExpenses = parseInt(playerExpenses) + parseInt(managerExpenses) + parseInt(coachExpenses);
+        const totalExpenses = parseFloat(playerExpenses) + parseFloat(managerExpenses) + parseFloat(coachExpenses);
         totalExpensesField.innerText = totalExpenses;
     }
 })
+
+function getMakeEmptyField() {
+    perPlayerField.value = '';
+    document.getElementById('playerExpensesField').innerText = '';
+    document.getElementById('managerField').value = '';
+    document.getElementById('coachField').value = '';
+    document.getElementById('totalExpensesField').innerText = '';
+}
 
 
 
