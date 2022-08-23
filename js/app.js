@@ -104,11 +104,9 @@ document.getElementById('btnCalculateTotal').addEventListener('click', function 
 
     if (isNaN(managerExpenses) || isNaN(coachExpenses)) {
         alert("Please provide a Valid Input");
-        perPlayerField.value = '';
     }
     else if (managerExpenses < 0 || coachExpenses < 0) {
         alert("Please provide a Positive Input");
-        perPlayerField.value = '';
     }
     else {
         const totalExpenses = parseFloat(playerExpenses) + parseFloat(managerExpenses) + parseFloat(coachExpenses);
