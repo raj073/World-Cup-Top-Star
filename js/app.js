@@ -21,7 +21,7 @@ function getListItem(playerName) {
         document.getElementById('selected-player-list').appendChild(li);
     }
     else if (parseInt(liNodes.length) >= 5) {
-        alert("You Inserted Maximum 5 Item List");
+        alert("You Can Add up to Maximum 5 Players in Item List");
     }
     //console.log(parseInt(liNodes.length));
 }
@@ -33,7 +33,8 @@ document.getElementById('eventBubbleClick').addEventListener('click', function (
 
     if (target.id === 'btnLionelMessi') {
         getListItem('lionelMessiText');
-        document.getElementById('btnLionelMessi').disabled = 'true';
+        //document.getElementById('btnLionelMessi').disabled = 'true';
+        document.getElementById('btnLionelMessi').setAttribute('disabled', true);
     }
     else if (target.id === 'btnNeymar') {
         getListItem('neymarText');
@@ -56,6 +57,60 @@ document.getElementById('eventBubbleClick').addEventListener('click', function (
         document.getElementById('btnMbappe').disabled = 'true';
     }
 
+})
+
+//Calculate Button Calculation Clicking Event
+
+document.getElementById('btnCalculate').addEventListener('click', function () {
+
+    const perPlayerField = document.getElementById('perPlayerField');
+    const inputPerPlayerField = parseInt(perPlayerField.value);
+
+    const playerExpensesField = document.getElementById('playerExpensesField');
+
+    const ul = document.getElementById("selected-player-list");
+    const liNodes = [];
+
+    for (var i = 0; i < ul.childNodes.length; i++) {
+        if (ul.childNodes[i].nodeName == "LI") {
+            liNodes.push(ul.childNodes[i]);
+        }
+    }
+    const howManyPlayer = parseInt(liNodes.length);
+
+    if (isNaN(inputPerPlayerField)) {
+        alert("Please provide a Valid Input");
+        perPlayerField.value = '';
+    }
+    else if (howManyPlayer < 0) {
+        alert('Please Select Player First');
+        perPlayerField.value = '';
+    }
+    else {
+        const totalExpenseForPlayer = inputPerPlayerField * howManyPlayer;
+        playerExpensesField.innerText = totalExpenseForPlayer;
+        perPlayerField.value = '';
+    }
+})
+
+document.getElementById('btnCalculateTotal').addEventListener('click', function () {
+    const playerExpenses = parseInt(document.getElementById('playerExpensesField').innerText);
+    const managerExpenses = parseInt(document.getElementById('managerField').value);
+    const coachExpenses = parseInt(document.getElementById('coachField').value);
+    const totalExpensesField = document.getElementById('totalExpensesField');
+
+    if (isNaN(managerExpenses) || isNaN(coachExpenses)) {
+        alert("Please provide a Valid Input");
+        perPlayerField.value = '';
+    }
+    else if (managerExpenses < 0 || coachExpenses < 0) {
+        alert("Please provide a Positive Input");
+        perPlayerField.value = '';
+    }
+    else {
+        const totalExpenses = parseInt(playerExpenses) + parseInt(managerExpenses) + parseInt(coachExpenses);
+        totalExpensesField.innerText = totalExpenses;
+    }
 })
 
 

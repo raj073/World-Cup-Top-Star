@@ -23,7 +23,7 @@ ol li {
 }
 
 /* Set all odd list items to a different color (zebra-stripes) */
-ol li:nth-child(odd) {
+ol li:nth-child() {
     background: #f9f9f9;
 }
 
