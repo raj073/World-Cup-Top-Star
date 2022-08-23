@@ -1,3 +1,16 @@
+section {
+    font-family: 'Poppins', sans-serif;
+}
+
+footer {
+    font-family: 'Poppins', sans-serif;
+}
+
+.fancy-font {
+    font-family: 'Berkshire Swash', sans-serif;
+    color: #FF5E19;
+}
+
 .masthead {
     height: 30vh;
     min-height: 350px;
@@ -30,4 +43,6 @@ ol li:nth-child() {
 /* Darker background-color on hover */
 ol li:hover {
     background: #ddd;
+    color: orangered;
+    font-weight: bold;
 }
