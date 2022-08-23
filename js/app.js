@@ -1,6 +1,5 @@
 
 // Get Top Player Name to Insert in List Item
-
 function getListItem(playerName) {
 
     const playerNameText = document.getElementById(playerName).innerText;
@@ -23,7 +22,6 @@ function getListItem(playerName) {
     else if (parseInt(liNodes.length) >= 5) {
         alert("You Can Add up to Maximum 5 Players in Item List");
     }
-    //console.log(parseInt(liNodes.length));
 }
 
 //Delegate Event Bubble
@@ -33,28 +31,27 @@ document.getElementById('eventBubbleClick').addEventListener('click', function (
 
     if (target.id === 'btnLionelMessi') {
         getListItem('lionelMessiText');
-        //document.getElementById('btnLionelMessi').disabled = 'true';
         document.getElementById('btnLionelMessi').setAttribute('disabled', true);
     }
     else if (target.id === 'btnNeymar') {
         getListItem('neymarText');
-        document.getElementById('btnNeymar').disabled = 'true';
+        document.getElementById('btnNeymar').setAttribute('disabled', true);
     }
     else if (target.id === 'btnAlison') {
         getListItem('alissonText');
-        document.getElementById('btnAlison').disabled = 'true';
+        document.getElementById('btnAlison').setAttribute('disabled', true);
     }
     else if (target.id === 'btnMarcelo') {
         getListItem('marceloText');
-        document.getElementById('btnMarcelo').disabled = 'true';
+        document.getElementById('btnMarcelo').setAttribute('disabled', true);
     }
     else if (target.id === 'btnRonaldo') {
         getListItem('ronaldoText');
-        document.getElementById('btnRonaldo').disabled = 'true';
+        document.getElementById('btnRonaldo').setAttribute('disabled', true);
     }
     else if (target.id === 'btnMbappe') {
         getListItem('mBappeText');
-        document.getElementById('btnMbappe').disabled = 'true';
+        document.getElementById('btnMbappe').setAttribute('disabled', true);
     }
 
 })
@@ -89,10 +86,10 @@ document.getElementById('btnCalculate').addEventListener('click', function () {
     else {
         const totalExpenseForPlayer = inputPerPlayerField * howManyPlayer;
         playerExpensesField.innerText = totalExpenseForPlayer;
-        perPlayerField.value = '';
     }
 })
 
+//Calculate Total Button Calculation Clicking Event
 document.getElementById('btnCalculateTotal').addEventListener('click', function () {
     const playerExpenses = parseInt(document.getElementById('playerExpensesField').innerText);
     const managerExpenses = parseInt(document.getElementById('managerField').value);
