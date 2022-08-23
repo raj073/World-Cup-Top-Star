@@ -116,6 +116,7 @@ document.getElementById('btnCalculateTotal').addEventListener('click', function 
     }
 })
 
+//Get Budget Section All Fill Blanked
 function getMakeEmptyField() {
     perPlayerField.value = '';
     document.getElementById('playerExpensesField').innerText = '';
